@@ -1,0 +1,46 @@
+@charset "UTF-8";
+*{
+    font-family: Verdana, Geneva, Tahoma, serif;
+    background-attachment: fixed;
+    /*height: 100%;*/
+
+}
+
+body{
+    background-image: linear-gradient(to bottom, #003547, #005E54);
+}
+
+main{
+    background-color: rgb(255, 255, 255);
+    width: 700px; /*Largura no do main na ocupação no back do gradiente.*/
+    padding: 13px; /*espaço de separação do conteudo com a largura do back-main*/
+    margin: auto; /*Para centralizar o conteudo do back-main no back do gradiente*/
+    border-radius: 8px; /* Para arredondar as pontas da borda, isto é, o quadrado do back-main*/
+    box-shadow: 10px,10px,10px, rgb(00, 00, 00);
+
+}
+
+img{
+    /*width: 690px;*/
+}
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: lighter;
+}
+h1{
+    text-align: center;
+    font-weight: 700;
+    font-style:normal;
+    color: #C2BB00;
+    box-shadow: 10px,10px,10px,black;
+
+}
+
+h2{
+    color: #E1523D;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: bold;
+
+}

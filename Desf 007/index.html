@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon dev.png" type="image/x-icon">
+    <title>Imagem Flexível</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>Imagem Flexível.</h1>
+    <p>Você está vendo uma imagem completa? Experimente ampliar o tamanho da sua janela para aproveitar melhor a experiença.</p>
+
+    <picture>
+        <source media="(max-width: 350)" srcset="midia/ao270.jpg" type="image/jpg">
+        <source media="(max-width: 550px)" srcset="midia/ao350.jpg" type="image/jpg">
+        <source media="(max-width: 700px)" srcset="midia/ao550.jpg" type="image/jpg">
+        <source media="(max-width: 850px)" srcset="midia/ao700.jpg" type="image/jpg">
+        <source media="(max-width: 1050px)" srcset="midia/ao850.jpg" type="image/jpg">
+        <img src="midia/ao1050.jpg" alt="Angola">
+    </picture>
+    <p>
+        
+        <a href="paginfo.html" target="_self">Ler + sobre Angola.</a>
+        <br>
+        <a href="pagmap.html" target="_self"> Ver Mapa.</a>
+        <br>
+        <a href="pagimg.html" target="_self">Ver Imagens.</a>
+    </p>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon/favicon program.png" type="image/x-icon">
+    <title>Consulta de Aprovação de Aluno</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .result {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Consulta de Aprovação de Aluno</h1>
+        <div class="input-group">
+            <label for="nota1">Nota 1:</label>
+            <input type="number" id="nota1" step="0.1" min="0" max="10">
+        </div>
+        <div class="input-group">
+            <label for="nota2">Nota 2:</label>
+            <input type="number" id="nota2" step="0.1" min="0" max="10">
+        </div>
+        <div class="input-group">
+            <label for="nota3">Nota 3:</label>
+            <input type="number" id="nota3" step="0.1" min="0" max="10">
+        </div>
+        <div class="input-group">
+            <button onclick="verificarAprovacao()">Consultar</button>
+        </div>
+        <div id="resultado" class="result"></div>
+    </div>
+
+    <script>
+        function verificarAprovacao() {
+            // Obtendo as notas inseridas
+            var nota1 = parseFloat(document.getElementById('nota1').value);
+            var nota2 = parseFloat(document.getElementById('nota2').value);
+            var nota3 = parseFloat(document.getElementById('nota3').value);
+
+            // Verificando se as notas são válidas
+            if (isNaN(nota1) || isNaN(nota2) || isNaN(nota3)) {
+                document.getElementById('resultado').innerText = 'Por favor, insira todas as notas.';
+                return;
+            }
+
+            // Calculando a média
+            var media = (nota1 + nota2 + nota3) / 3;
+
+            // Determinando se o aluno passou
+            var resultado = media >= 6.0 ? 'Parabéns! O aluno passou de classe.' : 'Infelizmente, o aluno não passou de classe.';
+
+            // Exibindo o resultado
+            document.getElementById('resultado').innerText = `Média: ${media.toFixed(1)}. ${resultado}`;
+        }
+    </script>
+</body>
+</html>
