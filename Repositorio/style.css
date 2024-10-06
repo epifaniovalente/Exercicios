@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family:'Roboto';
+    src: url(../fonte/Roboto-Black.ttf) format('truetype');
+    font-weight: normal;
+}
+:root{
+    --cor1: #024059;
+    --cor2: #026873;
+    --cor3: #04BF8A;
+    --cor4: #025940;
+    --cor5: #03A64A;
+
+    --font-padrao: Arial,Verdana,sans-serif,
+    --fontdestaque:'Roboto' cursive;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    background-color: var(--cor1);
+    min-height: 160px;
+    border-radius: 0px 0px 10px 10px ;
+}
+header h1{
+    padding: 15px;
+    /*padding-bottom: 50px;*/
+    font-family: var(--font-padrao);
+    text-align: center;
+    font-weight: bolder;
+    font-size: 3em;
+    color: var(--cor5);
+    text-shadow: 3px 2px 2px black;
+}
+nav{
+    background-color: var(--cor3);
+    padding: 8.2px;
+    box-shadow: 2px 2px 5px black;
+    border-radius: 10px;
+}
+nav a{
+    text-decoration: none;
+    margin-right: 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 7px;
+    border-radius: 5px;
+}
+nav a:hover{
+    background-color: var(--cor1);
+    color: var(--cor3);
+    transition: .5s;
+}
+main h2{
+    min-width: 300px;
+}
+body{
+    background-color: dimgray;
+}
+
+main section{
+    margin: auto;
+    min-width: 300px;
+    max-width: 700px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.651);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+main img{
+    width: 100%;
+}
+main img{
+    max-width: 320px;
+    margin: auto;
+    display: block;
+}
+main section p {
+    text-align: justify;;
+    text-indent: 35px;
+    font-size: 1.1em;
+    margin: 15px 0px 15px 0px;
+    line-height: 2em;
+}
+main section p strong.tec{
+    background-color: var(--cor5);
+    padding: 3px;
+    border-radius: 5px;
+}
+main section h2{
+    background-image: linear-gradient(to right, var(--cor3), white);
+    color: var(--cor4);
+    text-indent: 30px;
+    padding: 10px;
+    font-size: 2.3em;
+}
+
+footer{
+    min-width: 300px;
+    background-color: var(--cor1);
+    padding: 5px;
+}
+
+footer p{
+    text-align: center;
+    font-size: 0.8em;
+}
+footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 3px;
+    border-radius: 5px;
+}
+footer a:hover{
+    background-color: #04BF8A;
+    color: #024059;
+
+}
